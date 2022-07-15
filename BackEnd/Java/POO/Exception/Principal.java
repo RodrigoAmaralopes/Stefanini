@@ -14,7 +14,7 @@ public class Principal {
         //bmw.acelerar();
 
         try{
-            bmw2.setVelocidade_max(10);
+            bmw2.setVelocidade_max(-10);
         }
         catch(NegocioException e){
             System.out.println(e);
@@ -35,7 +35,7 @@ public class Principal {
             }
         }
 
-        bmw2.calculcarTaxaAceleracao(100.4, 5);
+        bmw2.calcularTaxaAceleracao(100.4, 5);
 
         bmw.setMarca("BMW");
         bmw.setModelo("M3");
@@ -54,12 +54,12 @@ public class Principal {
         bmw.acelerar();
         bmw.frear();
 
-        System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 0, 10, 0));
-        System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 10));
-        System.out.println(bmw.calculcarTaxaAceleracao(100, 5));
+        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidade_max(), 0, 10, 0));
+        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidade_max(), 10));
+        System.out.println(bmw.calcularTaxaAceleracao(100, 5));
 
-        bmw2.calculcarTaxaAceleracao(100.50, 10);
-        tesla.calculcarTaxaAceleracao(100.50, 10);
+        bmw2.calcularTaxaAceleracao(100.50, 10);
+        tesla.calcularTaxaAceleracao(100.50, 10);
 
     }
 }

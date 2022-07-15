@@ -8,7 +8,7 @@ public class Tesla extends Carro{
     }
 
     @Override
-    public double calculcarTaxaAceleracao(double vel_final, double tempo_final) {
+    public double calcularTaxaAceleracao(double vel_final, double tempo_final) {
         System.out.println("Tesla Sobreescrita");
         return vel_final * tempo_final;
     }
