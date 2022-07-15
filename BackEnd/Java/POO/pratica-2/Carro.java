@@ -21,10 +21,10 @@ public class Carro {
     public void frear(){
         System.out.println("Freando..");
     }
-    public double calculcarTaxaAceleracao(double vel_final, double vel_inicial, double tempo_final, double tempo_inicial){
+    public double calcularTaxaAceleracao(double vel_final, double vel_inicial, double tempo_final, double tempo_inicial){
         return (vel_final - vel_inicial) / (tempo_final - tempo_inicial) * 3.6;
     }
-    public double calculcarTaxaAceleracao(double vel_final, double tempo_final){
+    public double calcularTaxaAceleracao(double vel_final, double tempo_final){
         return (vel_final - 0) / (tempo_final - 0) * 3.6;
     }
     public String calculcarTaxaAceleracao(int vel_final, int tempo_final){

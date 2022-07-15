@@ -7,7 +7,7 @@ public class Principal {
         Carro mercedes = new Carro("Mercedes","guingu");
         BMW bmw2 = new BMW();
 
-        bmw2.calculcarTaxaAceleracao(100.4, 5);
+        bmw2.calcularTaxaAceleracao(100.4, 5);
 
         bmw.setMarca("BMW");
         bmw.setModelo("M3");
@@ -24,8 +24,8 @@ public class Principal {
         bmw.acelerar();
         bmw.frear();
 
-        System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 0, 10, 0));
-        System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 10));
-        System.out.println(bmw.calculcarTaxaAceleracao(100, 5));
+        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidade_max(), 0, 10, 0));
+        System.out.println(bmw.calcularTaxaAceleracao(bmw.getVelocidade_max(), 10));
+        System.out.println(bmw.calcularTaxaAceleracao(100, 5));
     }
 }
