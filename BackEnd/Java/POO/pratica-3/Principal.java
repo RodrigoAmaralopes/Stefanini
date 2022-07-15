@@ -1,50 +1,51 @@
 package br.com.stefanini.orientacaoaobjetos.pratica3;
 
-
 public class Principal {
-    public static void main(String[] args){
-        Carro bmw = new Carro();
-        Carro mercedes = new Carro("Mercedes","guingu");
-        BMW bmw2 = new BMW();
+	public static void main(String[] args) {
+		Carro bmw = new Carro();
+		Carro mercedes = new Carro("Mercedes", "C180");
+		BMW bmw2 = new BMW();
 
-        Tesla tesla = new Tesla();
-        Carro tesla_dois =  new Tesla();
+		Tesla tesla = new Tesla();
+		Carro tesla_dois = new Tesla();
 
-        tesla.isDirige_sozinho();
-        ((Tesla)tesla_dois).setDirige_sozinho(true);
-        System.out.println(((Tesla)tesla_dois).isDirige_sozinho());
+		tesla.isDirige_sozinho();
+		((Tesla) tesla_dois).setDirige_sozinho(true);
+		System.out.println(((Tesla) tesla_dois).isDirige_sozinho());
 
-        Carro[] carros = new Carro[] {bmw,tesla,tesla_dois};
+		Carro[] carros = new Carro[] { bmw, tesla, tesla_dois };
 
-        for (Carro carro : carros) {
-            if(carro instanceof Tesla){
-                System.out.println(((Tesla)carro).isDirige_sozinho());
-            }
-        }
+		for (Carro carro : carros) {
+			if (carro instanceof Tesla) {
+				System.out.println(((Tesla) carro).isDirige_sozinho());
+			}
+		}
 
-        bmw2.calculcarTaxaAceleracao(100.4, 5);
+		bmw2.calculcarTaxaAceleracao(100.50, 10);
+		tesla.calculcarTaxaAceleracao(100.50, 10);
 
-        bmw.setMarca("BMW");
-        bmw.setModelo("M3");
-        bmw.setKm_litro(7.5);
-        //bmw.aceleracao = 50;
-        bmw.setVelocidade_max(280);;
-        
-        System.out.println(mercedes.getMarca());
-        System.out.println(mercedes.getModelo());
-        System.out.println(bmw.getKm_litro());
-        System.out.println(bmw.getAceleracao());
-        System.out.println(bmw.getVelocidade_max());
+		bmw.setMarca("BMW");
+		bmw.setModelo("M3");
+		bmw.setKm_litro(7.5);
+		// bmw.aceleracao = 50;
+		bmw.setVelocidade_max(280);
+		;
 
-        bmw.acelerar();
-        bmw.frear();
+		System.out.println(mercedes.getMarca());
+		System.out.println(mercedes.getModelo());
+		System.out.println(bmw.getKm_litro());
+		System.out.println(bmw.getAceleracao());
+		System.out.println(bmw.getVelocidade_max());
 
-        System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 0, 10, 0));
-        System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 10));
-        System.out.println(bmw.calculcarTaxaAceleracao(100, 5));
+		bmw.acelerar();
+		bmw.frear();
 
-        bmw2.calculcarTaxaAceleracao(100.50, 10);
-        tesla.calculcarTaxaAceleracao(100.50, 10);
+		System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 0, 10, 0));
+		System.out.println(bmw.calculcarTaxaAceleracao(bmw.getVelocidade_max(), 10));
+		System.out.println(bmw.calculcarTaxaAceleracao(100, 5));
 
-    }
+		bmw2.calculcarTaxaAceleracao(100.50, 10);
+		tesla.calculcarTaxaAceleracao(100.50, 10);
+
+	}
 }

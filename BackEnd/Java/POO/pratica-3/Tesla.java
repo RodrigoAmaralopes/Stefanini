@@ -1,6 +1,7 @@
 package br.com.stefanini.orientacaoaobjetos.pratica3;
 
 public class Tesla extends Carro{
+	
     private boolean dirige_sozinho;
 
     public Tesla(){
